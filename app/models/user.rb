@@ -12,4 +12,6 @@ class User < ApplicationRecord
   has_many :followings, through: :given_follows, source: :followed_user
 
   has_many :posts
+
+  validates :email, :password, :password_confirmation, presence: true
 end
